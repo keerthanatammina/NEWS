@@ -1,0 +1,233 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>USER DASHBOARD</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<style>
+		body{
+			background: linear-gradient(skyblue,#c7ecee);
+			height: 100vh;
+			width: 100vw;
+		}
+		.bg1{
+			margin-left: 180px;
+			margin-right: 180px;
+		    color: black;
+		    padding-top: 150px;
+		}
+		.bg1 h3{
+			font-size: 50px;
+		}
+		.bg1 p{
+			padding-top: 20px;
+			font-size: 30px;
+			color: black;
+		}
+		.bg2{
+			padding-left: 120px;
+		}
+		.btn1{
+            border: none;
+            outline:none ;
+            height: 50px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            border-radius: 2000px;
+            font-weight: bold;
+
+        }
+        .btn1:hover{
+            background: white;
+            border: 1px solid;
+            color: black;
+        }
+	</style>
+</head>
+<body>
+	<div class="bg1 ">
+		<div class="text-center">
+			<div class="jumbotron shadow pb-5">
+  <h1 class="display-4">HURRAY! YOU ARE SUCCESFULLY LOGINED IN</h1>
+  <p class="lead">WELCOME {{fullname}} TO OUR WORLD NEWS</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="/logout" role="button">Logout</a>
+</div>
+ </div>
+ </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Logout Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+        section{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            background-color: #c7ecee;
+        }
+        section.imgbx{
+            position: relative;
+            width: 150%;
+            height: 100%;
+        }
+        section.imgbx:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(225deg,#e91e63,#03a9f4);
+            z-index: 1;
+            mix-blend-mode: screen;
+        }
+        section.imgbx img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+        }
+        section .contentbx{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            width: 50%;
+            height: 100%;
+        }
+        section .contentbx .formbx{
+            width: 50%;
+        }
+        section .contentbx .formbx h2{
+        color: #607d8b;
+        font-weight: 600;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        border-bottom: 4px solid #ff4584;
+        display: inline-block;
+        letter-spacing: 1px;
+        }
+        section .contentbx .formbx .inputbx{
+            margin-bottom: 20px;
+        } 
+        section .contentbx .formbx .inputbx span{
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: inline-block;
+            color: #607d8b;
+            font-weight: 300;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        section .contentbx .formbx .inputbx input{
+            width: 100%;
+            padding: 10px 20px;
+            outline: none;
+            font-weight: 400;
+            border: 1px solid #607d8b;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color:#607d8b ;
+            background: transparent;
+            border-radius: 30px;
+        }
+        section .contentbx .formbx .inputbx input[]{
+            background: #ff4584;
+            background-color: aliceblue;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+
+
+        }
+        section .contentbx .formbx .inputbx input[type="submit"]:hover{
+            background: #f53677;
+        }
+
+        @media(max-width: 768px)
+        {
+            section .imgbx{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            section .contentbx{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+
+            }
+            section .contentbx .formbx{
+                width: 100%;
+                padding: 40px;
+                background: rgb(255 255 255 / 0.9);
+                margin: 50px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div class="imgbx">
+        <img src="https://images.pexels.com/photos/1524146/pexels-photo-1524146.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    </div>
+    <div class="contentbx my-3 pt-3">
+        <div class="formbx">
+            <h2><p>HURRAY! YOU ARE SUCCESFULLY LOGINED IN {{fullname}}</p></h2>
+
+            
+        
+        
+            <form>
+                	
+                	<div class="inputbx">
+                     <button class="btn btn-light"><a  href="{{url_for('logout')}}">Logout</a></button> 
+
+                </div>
+
+            </form>
+            <h2>YOU DON'T LIKE TO LOGOUT THEN CLICK HERE</h2>
+            <button class="btn btn-light"><a href="{{url_for('reopen')}}">Next>></a></button>
+        </div>
+    </div>
+
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

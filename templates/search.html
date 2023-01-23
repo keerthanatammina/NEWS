@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+   <!-- Custom Styles -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+
+    <title>WORLD NEWS</title>
+    <style>
+      body{
+        background-color: #c7ecee;
+      }
+      nav li a{
+        font-size: 20px;
+        margin: 15px;
+        color: black;
+      }
+      h1{
+        color: white;
+      }
+      h5{
+        margin: 15px;
+        color: red;
+      }
+      h3{
+        color: white;
+      }
+      .tab-content{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 30px;
+        
+      }
+      .tab-content img{
+        height: 500px;
+        width: 1100px;
+      }
+      h4{
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+<!--NAV BAR CREATION-->
+     <nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <h1>WORLD NEWS</h1>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/news">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/sources">News Category</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/reopen">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Login/Out</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/reopen">Prev</a>
+      </li>
+    </ul>
+    <form action="{{ url_for('search') }}", method="post">
+        <input type="text" name="searchBar" placeholder="Search news here">
+        <button>Search</button>
+      </form>
+  </div>
+</nav>
+
+<div class="container">
+
+<ul class="nav nav-tabs" role="tablist">
+<!--
+    <li role="presentation"><a href="#business" role="tab" data-toggle="tab"><h5>Business</h5>&nbsp;&nbsp;&nbsp;</a></li>
+    <li role="presentation"><a href="#entertainment" role="tab" data-toggle="tab"><h5>Entertainment & Arts</h5>&nbsp;&nbsp;&nbsp;</a></li>
+    <li role="presentation" class="active"><a href="#general" role="tab" data-toggle="tab"><h5>Politics & General Topics</h5>&nbsp;&nbsp;&nbsp;</a></li>
+    <li role="presentation"><a href="#health" role="tab" data-toggle="tab"><h5>Health</h5>&nbsp;&nbsp;&nbsp;</a></li>
+    <li role="presentation"><a href="#science" role="tab" data-toggle="tab"><h5>Science & Life Style</h5>&nbsp;&nbsp;&nbsp;</a></li>
+    <li role="presentation"><a href="#sports" role="tab" data-toggle="tab"><h5>Sports</h5>&nbsp;&nbsp;&nbsp;</a></li>
+    <li role="presentation"><a href="#technology" role="tab" data-toggle="tab"><h5>Technology</h5>&nbsp;&nbsp;&nbsp;</a></li>
+</ul>
+</li>
+<br><br>-->
+
+
+{% for i in response['articles'] %}
+<div class="tab-content text-center">
+<div class="card shadow p-3 mb-5">
+  <img class="card-img-top" src={{ i['urlToImage'] }} alt="Image not available">
+  <div class="card-body">
+    <h5 class="card-title">{{ i['title'] }}</h5>
+    <p class="card-text"> {{ i['description'] }}</p>
+    <a href={{ i['url'] }} class="btn btn-info">Read more...</a>
+  </div>
+</div>
+</div>
+
+  {% endfor %}
+
+
+  <!-- Project -->
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+     <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="gowtham758550" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting. You can now buy me a coffee!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+      <footer><h6>&nbsp; Powered by <a href='https://newsapi.org/' target='_blank'>NEWS API</a> <br> &nbsp; &copy; 2023<a href='https://www.linkedin.com/in/gowtham-s-516433182' target='_blank'>WORLD NEWS</a>. &nbsp; &nbsp; All Rights Reserved</h6></footer>
+  </body>
+</html>

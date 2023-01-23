@@ -1,0 +1,443 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SIGNUP-PAGE</title>
+	
+	<style>
+		*{ padding: 0;
+       margin:0;
+       font-family:sans-serif; }
+       body{
+       	background: url('https://img.freepik.com/free-vector/global-digital-earth-network-connection-technology-background_1017-23328.jpg?w=1380&t=st=1672118494~exp=1672119094~hmac=018654ce97af1dc444d46d8605a84fd8fbe6b61bb0ca5548d156c94ad97663b8');
+       	background-size: cover;
+
+       }
+       .login-form{
+       	width: 350px;
+       	top: 50%;
+       	left: 50%;
+       	padding-left: 600px;
+       	transform: translate(-50%,-50%);
+       	position: absolute;
+       	color: white;
+       }
+       .login-form h1{
+       	font-size: 60px;
+       	padding-bottom: 10px;
+       	font-weight: bold;
+       	text-align: center;
+       	text-transform: uppercase;
+       	margin: 40px 0;
+       }
+       .login-form p{
+       	font-size: 20px;
+       	margin: 15px 0;
+       }
+       .login-form input{
+       	font-size: 16px;
+       	width: 100%;
+       	padding: 15px 10px;
+       	border: 0;
+       	outline: none;
+       	border-radius: 5px;
+       }
+       .login-form button{
+       	font-size: 18px;
+       	font-weight: bold;
+       	margin: 20px 0;
+       	padding: 5px 5px;
+       	width: 50%;
+       	border-radius: 5px;
+       }
+
+	</style>
+</head>
+<body>
+	<div class="login-form">
+		<div class="header">
+	{% if error %}
+	<h3 class="head1">{{error}}</h3>
+	{% endif %}
+
+	{% if msg %}
+	<h3 class="head2"> {{msg}}</h3>
+	<a class="a1" href="{{url_for('reopen')}}">Next Page</a>
+	{% endif %}
+</div>
+   
+   <div class="row">
+   <div class="col-3">
+   <form action="/signup" method="POST">
+   	
+   	<span>
+   		<label> Full Name </label>
+   		<input type="text" name="fullname"/>
+   	</span><br><br>
+   	<span>
+   		<label> Email</label>
+   		<input type="text" name="email"/>
+   	</span>
+   	<br>
+   	<br>
+   	<span>
+   		<label>Password</label>
+   		<input type="password" name="password"/>
+   	</span>
+   	<br>
+   	<br>
+   	<span>
+   		<label>Password Confirmation</label>
+   		<input type="password" name="pass"/>
+   	</span>
+   	<br>
+   	<br>
+   		<input type="submit" name="submit" value="Create Account"/>
+        
+   </form>
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Fullscreen Video Background - HTML & CSS</title>
+    <style>
+        html,body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-container:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.video-container video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw;
+    min-width: 177.6vh;
+    min-height: 100vh;
+    transform: translate(-50%, -50%);
+}
+
+.video-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+h1{
+    margin: 0;
+}
+
+h1 span{
+    color: #ff0000;
+}
+
+p{
+    margin-top: 10px;
+    font-weight: 100;
+    text-decoration: capitalize;
+}
+.video-overlay pre{
+	font-size: 30px;
+	font-weight: 100;
+}
+    </style>
+
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <div class="video-container">-->
+
+            <!--<video autoplay muted loop>
+                <source src="vid.mp4" type="video/mp4">
+            </video>-->
+            <!--<img src="https://img.freepik.com/free-vector/global-digital-earth-network-connection-technology-background_1017-23328.jpg?w=1380&t=st=1672118494~exp=1672119094~hmac=018654ce97af1dc444d46d8605a84fd8fbe6b61bb0ca5548d156c94ad97663b8" alt="...">
+
+        </div>
+
+        <div class="video-overlay">
+            <h1>WORLD<span>NEWS</span></h1>
+            <h3>USER LOGIN</h3>
+				{% if error %}
+	         <h3 class="head1">{{error}}</h3>
+	         {% endif %}
+
+	         {% if msg %}
+	         <h3 class="head2"> {{msg}}</h3>
+	         <a class="a1" href="{{url_for('reopen')}}">Next Page</a>
+	         {% endif %}
+
+
+			<form action="/signup" method="POST">
+   	
+   	<span>
+   		<label>Full Name </label>     <input type="text" name="fullname"/>
+   	</span><br><br>
+   	<span>
+   		<label> Email</label>     <input type="text" name="email"/>
+   	</span>
+   	<br>
+   	<br>
+   	<span>
+   		<label>Password</label>     <input type="password" name="password"/>
+   	</span>
+   	<br>
+   	<br>
+   	<span>
+   		<label>Password Confirmation</label>     <input type="password" name="pass"/>
+   	</span>
+   	<br>
+   	<br>
+   		<input type="submit" name="submit" value="Create Account"/>
+        
+   </form>
+
+
+        </div>
+
+    </div>
+
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+        section{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            background-color: #c7ecee;
+        }
+        section.imgbx{
+            position: relative;
+            width: 150%;
+            height: 100%;
+        }
+        section.imgbx:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(225deg,#e91e63,#03a9f4);
+            z-index: 1;
+            mix-blend-mode: screen;
+        }
+        section.imgbx img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300%;
+            height: 100%;
+            object-fit: cover;
+        }
+        section .contentbx{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            width: 50%;
+            height: 100%;
+        }
+        section .contentbx .formbx{
+            width: 50%;
+        }
+        section .contentbx .formbx h2{
+        color: #607d8b;
+        font-weight: 600;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        border-bottom: 4px solid #ff4584;
+        display: inline-block;
+        letter-spacing: 1px;
+        }
+        section .contentbx .formbx .inputbx{
+            margin-bottom: 20px;
+        } 
+        section .contentbx .formbx .inputbx span{
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: inline-block;
+            color: #607d8b;
+            font-weight: 300;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        section .contentbx .formbx .inputbx input{
+            width: 100%;
+            padding: 10px 20px;
+            outline: none;
+            font-weight: 400;
+            border: 1px solid #607d8b;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color:#607d8b ;
+            background: transparent;
+            border-radius: 30px;
+        }
+        section .contentbx .formbx .inputbx input[]{
+            background: #ff4584;
+            background-color: aliceblue;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+
+
+        }
+        section .contentbx .formbx .inputbx input[type="submit"]:hover{
+            background: #f53677;
+        }
+
+        @media(max-width: 768px)
+        {
+            section .imgbx{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            section .contentbx{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+
+            }
+            section .contentbx .formbx{
+                width: 100%;
+                padding: 40px;
+                background: rgb(255 255 255 / 0.9);
+                margin: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div class="imgbx">
+        <img src="https://images.pexels.com/photos/6347901/pexels-photo-6347901.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    </div>
+    <div class="contentbx my-3 pt-3">
+        <div class="formbx">
+            <h2>Create Account</h2>
+            
+            {% if error %}
+             <h3 class="head1">{{error}}</h3>
+             {% endif %}
+
+             {% if msg %}
+             <h3 class="head2"> {{msg}}</h3>
+             {% endif %}
+
+            <form action="/signup" method="POST">
+                <div class="inputbx">
+                    <span>FULL NAME</span>
+                    <input type="text" name="fullname"/>
+                </div>
+                <div class="inputbx">
+                    <span>Email Address</span>
+                    <input type="text" name="email"/>
+                </div>
+                <div class="inputbx">
+                    <span>Password</span>
+                    <input type="password" name="password"/>
+                </div>
+                <div class="inputbx">
+                    <span>Password Confirmation</span>
+                    <input type="password" name="pass"/>
+                </div>
+                <div class="inputbx">
+                    <input type="submit" value="Sign In" name="submit"/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

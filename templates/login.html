@@ -1,0 +1,499 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LOGIN PAGE</title>
+	
+	<style>
+       *{ padding: 0;
+       margin:0;
+       font-family:sans-serif; }
+       body{
+       	background: url('https://img.freepik.com/free-photo/finances-elements-composition-with-copy-space_23-2148793729.jpg?w=1060&t=st=1672116241~exp=1672116841~hmac=714c309cc3822c6d85e6667d82b241b6e3afd4620d42f45fa393e5988023e393');
+       	background-size: cover;
+       }
+       .login-form{
+       	width: 350px;
+       	top: 50%;
+       	left: 50%;
+       	transform: translate(-50%,-50%);
+       	position: absolute;
+       	color: black;
+       }
+       h3{
+       	font-size: 50px;
+       	padding-bottom: 20px;
+       }
+       .login-form h1{
+       	font-size: 60px;
+       	padding-bottom: 10px;
+       	font-weight: bold;
+       	text-align: center;
+       	text-transform: uppercase;
+       	margin: 40px 0;
+       }
+       .login-form p{
+       	font-size: 20px;
+       	margin: 15px 0;
+       }
+       .login-form input{
+       	font-size: 16px;
+       	width: 100%;
+       	padding: 15px 10px;
+       	border: 0;
+       	outline: none;
+       	border-radius: 5px;
+       }
+       .login-form button{
+       	font-size: 18px;
+       	font-weight: bold;
+       	margin: 20px 0;
+       	padding: 10px 15px;
+       	width: 50%;
+       	border-radius: 5px;
+       }
+	</style>
+</head>
+<body>
+
+<div class="login-form">
+	
+<h3>USER LOGIN</h3>
+{% if error %}
+<div style="color:red">{{error}}</div>
+{% endif %}
+
+
+<form action="/login" method="post">
+	
+	
+		<label>
+		USER NAME
+	   </label>
+	   <input type="text" name="email"/>
+		<p><label>
+			Password
+		</label>
+	    <input type="password" name="password"/></p>
+	    <pre><button type="submit">Login</button><a href="{{url_for('dashboard')}}"></a>     <button type="submit">Logout</button></pre>
+	
+
+</form>
+
+</div>
+
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Fullscreen Video Background - HTML & CSS</title>
+    <style>
+        html,body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-container:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.video-container video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw;
+    min-width: 177.6vh;
+    min-height: 100vh;
+    transform: translate(-50%, -50%);
+}
+
+.video-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+h1{
+    margin: 0;
+}
+
+h1 span{
+    color: #ff0000;
+}
+
+p{
+    margin-top: 10px;
+    font-weight: 100;
+    text-decoration: capitalize;
+}
+.video-overlay pre{
+	font-size: 30px;
+	font-weight: 100;
+}
+    </style>
+
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <div class="video-container">-->
+
+            <!--<video autoplay muted loop>
+                <source src="vid.mp4" type="video/mp4">
+            </video>-->
+            <!--<img src="https://img.freepik.com/free-photo/finances-elements-composition-with-copy-space_23-2148793729.jpg?w=1060&t=st=1672116241~exp=1672116841~hmac=714c309cc3822c6d85e6667d82b241b6e3afd4620d42f45fa393e5988023e393" alt="...">
+
+        </div>
+
+        <div class="video-overlay">
+            <h1>WORLD<span>NEWS</span></h1>
+            <h3>USER LOGIN</h3>
+				{% if error %}
+				<div style="color:red">{{error}}</div>
+				{% endif %}
+
+
+			<form action="/login" method="post">
+    
+    
+        		<label>
+        			USER NAME
+       			</label>
+       			<input type="text" name="email"/>
+        		<p><label>
+            		Password
+        		</label>
+        		<input type="password" name="password"/></p>
+        		<pre>    <button type="submit">Login</button>         <a href="{{url_for('signup')}}"></a><button type="submit">Forgot Password?</button></pre>
+    
+
+				</form>
+
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>LOGIN PAGE</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: rgb(219,226,226);
+        }
+        .row{
+            background: white;
+            border-radius: 30px;
+        }
+        .img{
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        .btn1{
+            border: none;
+            outline:none ;
+            height: 50px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .btn1:hover{
+            background: white;
+            border: 1px solid;
+            color: black;
+        }
+    </style>
+  </head>
+  <body>
+
+    
+    
+    <section class="Form my-4 mx-5">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-5">
+                    <img src="https://images.pexels.com/photos/1524146/pexels-photo-1524146.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" alt="">
+                </div>
+                
+
+                <div class="col-lg-7">
+                    {% if error %}
+    <h3 class="head1">{{error}}</h3>
+    {% endif %}
+                    <form action="/login" method="post">
+                        <div class="form-row">
+                            <div class="col-lg-7 px-5 pt-5">
+                                <h1 class="font-weight-bold py-3">LOGIN</h1>
+                                <h4>Login to your account</h4>
+                                
+                                <input type="email" class="form-control my-3 p-4" placeholder="Email Address" name="email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-lg-7 px-5 pt-3">
+                                <input type="password" class="form-control my-3 p-4" placeholder="*********" name="password">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-lg-7 px-5 pt-3">
+                                <button type="button" class="btn1 mt-3 mb-5">Login</button>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-lg-7 px-5 pt-3">
+                        <a href="{{url_for('signup')}}">Forgot Password</a>
+                        <p>Don't have an account? <a href="{{url_for('signup')}}">Register Here</a></p>
+                             </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+
+        }
+        section{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            background-color: #c7ecee;
+        }
+        section.imgbx{
+            position: relative;
+            width: 150%;
+            height: 100%;
+        }
+        section.imgbx:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(225deg,#e91e63,#03a9f4);
+            z-index: 1;
+            mix-blend-mode: screen;
+        }
+        section.imgbx img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300%;
+            height: 100%;
+            object-fit: cover;
+        }
+        section .contentbx{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            width: 50%;
+            height: 100%;
+        }
+        section .contentbx .formbx{
+            width: 50%;
+        }
+        section .contentbx .formbx h2{
+        color: #607d8b;
+        font-weight: 600;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        border-bottom: 4px solid #ff4584;
+        display: inline-block;
+        letter-spacing: 1px;
+        }
+        section .contentbx .formbx .inputbx{
+            margin-bottom: 20px;
+        } 
+        section .contentbx .formbx .inputbx span{
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: inline-block;
+            color: #607d8b;
+            font-weight: 300;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        section .contentbx .formbx .inputbx input{
+            width: 100%;
+            padding: 10px 20px;
+            outline: none;
+            font-weight: 400;
+            border: 1px solid #607d8b;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color:#607d8b ;
+            background: transparent;
+            border-radius: 30px;
+        }
+        section .contentbx .formbx .inputbx input[]{
+            background: #ff4584;
+            background-color: aliceblue;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+
+
+        }
+        section .contentbx .formbx .inputbx input[type="submit"]:hover{
+            background: #f53677;
+        }
+
+        @media(max-width: 768px)
+        {
+            section .imgbx{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            section .contentbx{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+
+            }
+            section .contentbx .formbx{
+                width: 100%;
+                padding: 40px;
+                background: rgb(255 255 255 / 0.9);
+                margin: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div class="imgbx">
+        <img src="https://images.pexels.com/photos/6347901/pexels-photo-6347901.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    </div>
+    <div class="contentbx my-3 pt-3">
+        <div class="formbx">
+            <h2>Login</h2>
+            
+            {% if error %}
+             <h3 class="head1">{{error}}</h3>
+             {% endif %}
+
+            <form action="/login" method="POST">
+            
+                <div class="inputbx">
+                    <span>Email Address</span>
+                    <input type="text" name="email"/>
+                </div>
+                <div class="inputbx">
+                    <span>Password</span>
+                    <input type="password" name="password"/>
+                </div>
+                
+                <div class="inputbx">
+                    <input type="submit" value="Login" name="submit"/>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
